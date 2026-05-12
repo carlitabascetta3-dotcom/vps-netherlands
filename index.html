@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ТОП VPS/VDS в Нидерландах 2026: аренда дешёвых и быстрых ВПС серверов</title>
+<meta name="description" content="Рейтинг VPS серверов в Нидерландах 2026: аренда дешёвого и быстрого VPS/VDS в Амстердаме от 210 ₽. NVMe, KVM, оплата рублями и криптой, тесты железа.">
+<link rel="canonical" href="https://vps-netherlands.vercel.app/">
+<meta property="og:title" content="ТОП VPS/VDS в Нидерландах 2026 - рейтинг хостингов в Амстердаме">
+<meta property="og:description" content="10 проверенных VPS-провайдеров с серверами в Нидерландах. Цены, железо, тесты, оплата из РФ. Под AI, VPN, веб и B2B.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vps-netherlands.vercel.app/">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#6c5ce7">
+<link rel="icon" type="image/webp" href="/fav.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Что такое VPS в Нидерландах и чем VPS отличается от VDS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VPS (Virtual Private Server) и VDS (Virtual Dedicated Server) - синонимы. Это виртуальная машина на физическом сервере в дата-центре. На KVM-виртуализации разницы между VPS и VDS нет. VPS Нидерланды означает, что физический сервер стоит на территории Нидерландов, чаще всего в Амстердаме."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько стоит арендовать VPS в Нидерландах?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Минимальный тариф VPS Нидерланды - 210 ₽/мес у Beget и 240 ₽ у VDSina. Топовые конфигурации с Ryzen 9 - от 3000 ₽. Bare-metal с GPU - от 25 000 ₽/мес."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли купить VPS в Нидерландах за рубли?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Все десять провайдеров из подборки принимают карты РФ и берут оплату в рублях без конвертации. СБП поддерживают Timeweb Cloud, VDSina и AdminVPS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой VPS Нидерланды лучше для VPN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fornex (не блокирует протоколы), AdminVPS с промокодом VPS30, Aeza на европейской площадке. Минимальная конфигурация - 1 vCPU и 1 ГБ RAM, для VLESS+XHTTP лучше 1 ГБ и больше."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "VPS Нидерланды посуточно и с почасовой оплатой - где взять?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Почасовая оплата VPS - у Aeza и Timeweb Cloud. Посуточная - у VDSina. Удобно для тестов, временных задач и нагрузочных прогонов."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Поддерживается ли Docker и Kubernetes на VPS в Нидерландах?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Все провайдеры используют KVM-виртуализацию. Docker, K3s, kubeadm работают без ограничений. Готовые образы с Docker есть у Beget, Timeweb Cloud и Aeza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли арендовать VPS в Амстердаме анонимно, без паспорта?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aeza и Fornex принимают криптовалюту без KYC. Hostkey - через BitPay. Анонимная оплата без верификации возможна."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "VPS Нидерланды с защитой от DDoS - у кого взять?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aeza (фильтрация до 2 Тбит/с в базовом тарифе), Fornex (до 10 Гбит/с), Hostkey (антидидос на голландской площадке). Подходит для игровых серверов и публичных API."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#f7f8fc;
+  --bg2:#ffffff;
+  --bg3:#eef0f7;
+  --text:#1a1d2e;
+  --text2:#5a6178;
+  --accent:#6c5ce7;
+  --accent2:#5b4dd1;
+  --accent-soft:#eeebff;
+  --green:#00c896;
+  --gold:#f5b800;
+  --silver:#9aa3b2;
+  --bronze:#cd7f32;
+  --orange:#ff8a3d;
+  --red:#e74c3c;
+  --border:#e3e6ef;
+  --shadow:0 8px 24px rgba(20,30,80,.06);
+  --shadow2:0 16px 48px rgba(20,30,80,.10);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter","Roboto",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent2)}
+img{max-width:100%;height:auto}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  max-width:1180px;margin:0 auto;padding:.85rem 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+.nav-logo{font-weight:800;font-size:1.15rem;color:var(--text);letter-spacing:-.02em}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center}
+.nav-links a{color:var(--text2);font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:.4rem}
+.burger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px}
+
+/* HERO */
+.hero{
+  max-width:1180px;margin:0 auto;padding:4rem 1.5rem 3rem;
+  text-align:center;
+}
+.hero-badge{
+  display:inline-block;
+  background:var(--accent-soft);color:var(--accent2);
+  padding:.5rem 1.1rem;border-radius:99px;
+  font-size:.85rem;font-weight:600;margin-bottom:1.3rem;
+  border:1px solid rgba(108,92,231,.15);
+}
+.hero h1{
+  font-size:clamp(1.9rem, 4.5vw, 3.2rem);
+  font-weight:800;letter-spacing:-.025em;line-height:1.15;
+  margin-bottom:1.2rem;color:var(--text);
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--accent),#a29bfe);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{
+  font-size:1.1rem;color:var(--text2);max-width:720px;margin:0 auto 2rem;
+}
+.hero-cta-row{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.hero-cta{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-weight:700;padding:.95rem 1.8rem;border-radius:12px;
+  box-shadow:0 10px 24px rgba(108,92,231,.28);
+  transition:transform .15s,box-shadow .15s;
+}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(108,92,231,.36);color:#fff}
+.hero-cta.ghost{
+  background:#fff;color:var(--accent);
+  border:2px solid var(--accent);box-shadow:none;
+}
+.hero-cta.ghost:hover{background:var(--accent-soft)}
+
+.trust-row{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+.trust-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:#fff;border:1px solid var(--border);
+  padding:.5rem 1rem;border-radius:99px;font-size:.85rem;color:var(--text2);
+  box-shadow:var(--shadow);
+}
+
+/* STATS */
+.stats{
+  max-width:1180px;margin:0 auto;padding:0 1.5rem 3rem;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
+}
+.stat{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem 1rem;text-align:center;box-shadow:var(--shadow);
+}
+.stat-num{
+  font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:-.02em;
+  background:linear-gradient(135deg,var(--accent),#a29bfe);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.stat-label{font-size:.85rem;color:var(--text2);margin-top:.3rem}
+
+/* TICKER */
+.ticker-wrap{
+  overflow:hidden;background:var(--accent-soft);border-block:1px solid rgba(108,92,231,.15);
+  padding:.7rem 0;
+}
+.ticker{
+  display:flex;gap:2.5rem;white-space:nowrap;
+  animation:tick 40s linear infinite;
+}
+.ticker span{color:var(--accent2);font-weight:600;font-size:.92rem}
+.ticker span::before{content:"•";margin-right:1.2rem;color:var(--accent)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:4rem 1.5rem}
+.section.alt{background:var(--bg3)}
+.container{max-width:1180px;margin:0 auto}
+.section-title{
+  font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;text-align:center;
+  letter-spacing:-.02em;margin-bottom:.6rem;
+}
+.section-sub{text-align:center;color:var(--text2);max-width:720px;margin:0 auto 2.5rem;font-size:1.05rem}
+
+.article{max-width:880px;margin:0 auto}
+.article h2{
+  font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;
+  margin:2.5rem 0 1rem;letter-spacing:-.02em;
+}
+.article h3{font-size:1.3rem;font-weight:700;margin:1.8rem 0 .8rem}
+.article p{margin-bottom:1.1rem;color:#2c3142}
+.article ul,.article ol{margin:0 0 1.2rem 1.5rem;color:#2c3142}
+.article ul li{margin-bottom:.5rem}
+.article-highlight{
+  background:var(--accent-soft);border-left:4px solid var(--accent);
+  padding:1.1rem 1.4rem;margin:1.5rem 0;border-radius:0 12px 12px 0;
+}
+.article-highlight2{
+  background:#e7faf3;border-left:4px solid var(--green);
+  padding:1.1rem 1.4rem;margin:1.5rem 0;border-radius:0 12px 12px 0;
+}
+.article-highlight3{
+  background:#fff3e6;border-left:4px solid var(--orange);
+  padding:1.1rem 1.4rem;margin:1.5rem 0;border-radius:0 12px 12px 0;
+}
+.code-block{
+  background:#1a1d2e;color:#a29bfe;font-family:"JetBrains Mono","Courier New",monospace;
+  padding:1.2rem 1.4rem;border-radius:12px;font-size:.88rem;
+  margin:1.5rem 0;overflow-x:auto;line-height:1.6;
+}
+.code-block .comment{color:#6c7293}
+
+/* RATING CARDS */
+.rating-list{display:flex;flex-direction:column;gap:1.2rem}
+.rating-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem;display:grid;grid-template-columns:64px 1fr 220px;gap:1.5rem;
+  align-items:center;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;
+  position:relative;overflow:hidden;
+}
+.rating-card:hover{transform:translateY(-3px);box-shadow:var(--shadow2)}
+.rating-card.gold{border-color:rgba(245,184,0,.4);background:linear-gradient(135deg,#fffbeb 0%,#fff 60%)}
+.rating-card.silver{border-color:rgba(154,163,178,.4);background:linear-gradient(135deg,#f6f7fa 0%,#fff 60%)}
+.rating-card.bronze{border-color:rgba(205,127,50,.35);background:linear-gradient(135deg,#fdf5ec 0%,#fff 60%)}
+.rank{
+  font-size:2.4rem;font-weight:900;text-align:center;
+  color:var(--text2);line-height:1;
+}
+.rating-card.gold .rank{color:var(--gold)}
+.rating-card.silver .rank{color:var(--silver)}
+.rating-card.bronze .rank{color:var(--bronze)}
+.card-info h3{font-size:1.35rem;font-weight:800;margin-bottom:.4rem}
+.card-desc{color:var(--text2);font-size:.95rem;margin-bottom:.7rem}
+.card-meta{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:.7rem;font-size:.85rem;color:var(--text2)}
+.card-tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.tag{
+  background:var(--bg3);color:var(--text2);font-size:.75rem;font-weight:600;
+  padding:.3rem .7rem;border-radius:99px;
+}
+.tag.hot{background:#ffe1e1;color:#c0392b}
+.tag.green{background:#d8f5e9;color:#0d8a6a}
+.badge-choice,.badge-popular,.badge-cheap,.badge-new{
+  display:inline-block;font-size:.7rem;font-weight:700;padding:.25rem .6rem;
+  border-radius:99px;margin-bottom:.5rem;letter-spacing:.04em;
+}
+.badge-choice{background:#fff3cd;color:#8a6d00}
+.badge-popular{background:#fde2e2;color:#c0392b}
+.badge-cheap{background:#d8f5e9;color:#0d8a6a}
+.badge-new{background:#e0e8ff;color:#3b5bdb}
+.card-right{text-align:center}
+.card-price{font-size:1.7rem;font-weight:800;color:var(--accent2);letter-spacing:-.02em}
+.card-price-label{font-size:.78rem;color:var(--text2);margin-bottom:.4rem}
+.card-score{color:var(--gold);font-size:.85rem;margin-bottom:.7rem;font-weight:600}
+.card-btn{
+  display:block;background:var(--bg3);color:var(--text);
+  padding:.7rem 1rem;border-radius:10px;font-weight:700;font-size:.9rem;
+  transition:all .15s;
+}
+.card-btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  box-shadow:0 6px 16px rgba(108,92,231,.25);
+}
+.card-btn-primary:hover{transform:translateY(-1px);color:#fff}
+.card-btn-green{background:linear-gradient(135deg,var(--green),#00a87d);color:#fff}
+.card-btn-green:hover{color:#fff}
+.promo-code{
+  margin-top:.5rem;font-size:.75rem;font-weight:700;
+  background:#fff3cd;color:#8a6d00;padding:.35rem .6rem;border-radius:6px;
+  font-family:"JetBrains Mono",monospace;
+}
+
+/* RECOMMENDER */
+.recommender{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.7rem;margin-bottom:2rem;box-shadow:var(--shadow);
+}
+.recommender h3{font-size:1.15rem;font-weight:700;margin-bottom:1rem;text-align:center}
+.rec-btns{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:1rem}
+.rec-btn{
+  background:var(--bg3);border:1px solid var(--border);
+  color:var(--text);padding:.6rem 1.1rem;border-radius:10px;
+  font-weight:600;cursor:pointer;font-size:.9rem;transition:all .15s;
+}
+.rec-btn:hover{background:var(--accent-soft);border-color:var(--accent)}
+.rec-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.rec-result{
+  display:none;background:#e7faf3;border-left:4px solid var(--green);
+  padding:1rem 1.2rem;border-radius:0 10px 10px 0;font-size:.95rem;
+}
+.rec-result.show{display:block}
+.rec-result a{font-weight:700}
+
+/* DETAIL CARDS */
+.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.3rem}
+.detail-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem;box-shadow:var(--shadow);transition:transform .2s;
+}
+.detail-card:hover{transform:translateY(-3px);box-shadow:var(--shadow2)}
+.detail-gold{border-top:4px solid var(--gold)}
+.detail-silver{border-top:4px solid var(--silver)}
+.detail-bronze{border-top:4px solid var(--bronze)}
+.detail-header{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;flex-wrap:wrap}
+.detail-rank{font-size:1.2rem;font-weight:800}
+.detail-name{font-size:1.3rem;font-weight:800;flex:1;min-width:0}
+.detail-price{
+  background:var(--accent-soft);color:var(--accent2);
+  padding:.3rem .7rem;border-radius:8px;font-size:.85rem;font-weight:700;
+  white-space:nowrap;
+}
+.detail-specs{margin-bottom:1rem}
+.spec-row{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.5rem 0;border-bottom:1px dashed var(--border);font-size:.9rem;
+}
+.spec-row:last-child{border-bottom:none}
+.spec-label{color:var(--text2)}
+.spec-value{font-weight:600;text-align:right}
+.detail-pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1rem}
+.detail-pros,.detail-cons{
+  background:var(--bg3);border-radius:10px;padding:.8rem;font-size:.82rem;line-height:1.5;
+}
+.detail-pros{background:#e7faf3}
+.detail-cons{background:#fff0ee}
+.dpc-title{font-weight:700;margin-bottom:.4rem;font-size:.85rem}
+.detail-pros p,.detail-cons p{margin-bottom:.25rem;color:#2c3142}
+.detail-btn{
+  display:block;text-align:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  padding:.8rem;border-radius:10px;font-weight:700;
+  box-shadow:0 6px 16px rgba(108,92,231,.25);
+}
+.detail-btn:hover{color:#fff;transform:translateY(-1px)}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;min-width:780px;font-size:.92rem}
+thead{background:var(--accent-soft)}
+th{
+  text-align:left;padding:.95rem 1rem;font-weight:700;color:var(--accent2);
+  font-size:.85rem;letter-spacing:.02em;text-transform:uppercase;
+}
+td{padding:.85rem 1rem;border-top:1px solid var(--border)}
+tbody tr:hover{background:var(--bg3)}
+
+/* PROS-CONS */
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.5rem 0}
+.pros,.cons{
+  background:#fff;border:1px solid var(--border);
+  border-radius:12px;padding:1.2rem;box-shadow:var(--shadow);
+}
+.pros{border-top:3px solid var(--green)}
+.cons{border-top:3px solid var(--red)}
+.pros h4,.cons h4{margin-bottom:.7rem;font-size:1rem;font-weight:700}
+.pros p,.cons p{font-size:.92rem;margin-bottom:.3rem}
+
+/* MID CTA */
+.mid-cta-banner{
+  background:linear-gradient(135deg,var(--accent),#a29bfe);
+  color:#fff;border-radius:var(--radius);padding:1.8rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  flex-wrap:wrap;margin:2rem 0;box-shadow:0 14px 36px rgba(108,92,231,.3);
+}
+.mcb-text h3{font-size:1.3rem;font-weight:800;margin-bottom:.3rem;color:#fff}
+.mcb-text p{font-size:.95rem;color:rgba(255,255,255,.9)}
+.mcb-btn{
+  background:#fff;color:var(--accent2);font-weight:700;
+  padding:.85rem 1.5rem;border-radius:10px;white-space:nowrap;
+}
+.mcb-btn:hover{color:var(--accent2);transform:translateY(-1px)}
+
+/* FAQ */
+.faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:.7rem}
+.faq-item{
+  background:#fff;border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;box-shadow:var(--shadow);
+}
+.faq-q{
+  padding:1.1rem 1.4rem;cursor:pointer;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  transition:background .15s;font-size:1rem;
+}
+.faq-q:hover{background:var(--bg3)}
+.faq-q::after{content:"+";font-size:1.4rem;color:var(--accent);font-weight:400;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  padding:0 1.4rem;color:var(--text2);transition:all .3s ease;
+}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.4rem 1.2rem}
+
+/* FINAL CTA */
+.cta-block{
+  background:linear-gradient(135deg,#1a1d2e,#2c2f4a);color:#fff;
+  padding:4rem 1.5rem;text-align:center;
+}
+.cta-block-inner{max-width:760px;margin:0 auto}
+.cta-block h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:1rem;letter-spacing:-.02em}
+.cta-block p{color:rgba(255,255,255,.8);margin-bottom:1.5rem;font-size:1.05rem}
+.cta-buttons{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.footer{
+  background:#0f1220;color:#8a8fa8;padding:2.5rem 1.5rem;text-align:center;font-size:.88rem;
+}
+.footer p{margin-bottom:.5rem}
+
+/* STICKY BAR */
+.sticky-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  padding:.8rem 1rem;display:flex;align-items:center;justify-content:center;gap:1rem;
+  box-shadow:0 -8px 24px rgba(20,30,80,.18);
+  transform:translateY(110%);transition:transform .35s;
+}
+.sticky-bar.show{transform:translateY(0)}
+.sticky-bar-text{font-size:.92rem}
+.sb-short{display:none}
+.sticky-bar-btn{
+  background:#fff;color:var(--accent2);font-weight:700;
+  padding:.55rem 1.1rem;border-radius:8px;white-space:nowrap;font-size:.88rem;
+}
+.sticky-bar-btn:hover{color:var(--accent2)}
+.sticky-bar-close{
+  background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;
+  width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .rating-card{grid-template-columns:50px 1fr;}
+  .rating-card .card-right{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:.6rem;text-align:left;border-top:1px solid var(--border);padding-top:1rem}
+  .card-btn{grid-column:1 / -1}
+  .pros-cons{grid-template-columns:1fr}
+  .detail-pros-cons{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    background:#fff;flex-direction:column;padding:1rem 1.5rem;gap:1rem;
+    border-bottom:1px solid var(--border);
+  }
+  .nav-links.open{display:flex}
+  .burger{display:flex}
+  .section{padding:2.5rem 1rem}
+  .hero{padding:2.5rem 1rem 2rem}
+  .sb-full{display:none}
+  .sb-short{display:inline}
+  .mid-cta-banner{flex-direction:column;text-align:center}
+}
+@media (max-width:480px){
+  .stats{grid-template-columns:1fr 1fr;gap:.7rem}
+  .stat{padding:1.1rem .6rem}
+  .stat-num{font-size:1.5rem}
+  .card-price{font-size:1.4rem}
+}
+</style>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+<a href="/" class="nav-logo"><img src="/logo_net.png" alt="VLESS VPN" height="58"></a>
+    <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Меню"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#rating">Рейтинг</a></li>
+      <li><a href="#details">Сравнение</a></li>
+      <li><a href="#ai-ml">Для AI/ML</a></li>
+      <li><a href="#payment">Оплата</a></li>
+      <li><a href="#guide">Как выбрать</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-badge">✅ Обновлено: 12 мая 2026 - цены и тесты перепроверены</div>
+  <h1>ТОП VPS/VDS в <em>Нидерландах</em><br>аренда дешёвых и быстрых ВПС серверов</h1>
+  <p class="lead">Десять провайдеров с виртуальными серверами в Амстердаме. NVMe, KVM, оплата из РФ. Под AI-инференс, VPN, веб и B2B - без воды и маркетинга.</p>
+  <div class="hero-cta-row">
+    <a href="#rating" class="hero-cta">🏆 Открыть рейтинг</a>
+    <a href="#details" class="hero-cta ghost">📊 Подробное сравнение</a>
+  </div>
+  <div class="trust-row">
+    <div class="trust-badge"><span>🇳🇱</span><span>10 хостеров в NL</span></div>
+    <div class="trust-badge"><span>⚡</span><span>Пинг 35-50 мс из Москвы</span></div>
+    <div class="trust-badge"><span>💳</span><span>Карты РФ, СБП, крипта</span></div>
+    <div class="trust-badge"><span>🔒</span><span>Только KVM-виртуализация</span></div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">10</div><div class="stat-label">Провайдеров в подборке</div></div>
+  <div class="stat"><div class="stat-num">от 210₽</div><div class="stat-label">Порог входа</div></div>
+  <div class="stat"><div class="stat-num">99.97%</div><div class="stat-label">Аптайм лидеров</div></div>
+  <div class="stat"><div class="stat-num">2 Тбит/с</div><div class="stat-label">Anti-DDoS у Aeza</div></div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>VPS Нидерланды</span><span>VPS Амстердам</span><span>VDS Голландия</span><span>NVMe SSD</span><span>KVM-виртуализация</span><span>AMS-IX</span><span>Ryzen 9 9950X</span><span>AMD EPYC</span><span>Anti-DDoS</span><span>VPN на VPS</span>
+    <span>VPS Нидерланды</span><span>VPS Амстердам</span><span>VDS Голландия</span><span>NVMe SSD</span><span>KVM-виртуализация</span><span>AMS-IX</span><span>Ryzen 9 9950X</span><span>AMD EPYC</span><span>Anti-DDoS</span><span>VPN на VPS</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section" id="intro">
+  <div class="article">
+    <h2>Зачем разработчику ВПС сервер в Нидерландах</h2>
+    <p>Я гоняю европейские виртуалки с 2017 года. Под inference-эндпоинты, под прокси-фермы, под трейдинг-боты, под скучные сайты-визитки. И если меня спросить, где брать VPS в Нидерландах под нагрузку посерьёзнее, чем личный WireGuard, ответ будет коротким. В Амстердаме. И не у первого попавшегося.</p>
+    <p>Почему именно VPS Нидерланды. Не потому что модно. А потому что в этом городе стоит AMS-IX - второй по объёму трафика интернет-обменник планеты. Через него peering'ятся почти все крупные ASN Европы. Это значит короткие маршруты, низкие RTT, минимум промежуточных хопов. Из Москвы до амстердамских ЦОД пакет идёт 35-50 мс.</p>
+    <p>Раньше я думал, что VPS - это для VPN и сайтиков. Потом начал гонять LLaMA-инференс на CPU и понял. Виртуалка в Амстердаме сегодня - это staging-окружение с европейским IP для HuggingFace и OpenAI без VPN-костылей, прокси-нода для скрапинга, хост для Docker Swarm и небольших Kubernetes-кластеров, jump-host для bare-metal с GPU, база для MLflow и Airflow self-hosted. И да, для VPN тоже. Но это уже побочка.</p>
+    <div class="article-highlight">
+      <strong>Главное про Нидерланды:</strong> Tier III и Tier IV ЦОД (Equinix AM, Interxion, EvoSwitch, Worldstream, Serverius) стоят в одном районе и пирятся через AMS-IX. Аренда VPS Нидерланды у любого нормального хостера даёт сопоставимую сетевую близость к глобальным CDN. Зелёная энергетика - бонус для отчётности по ESG: Equinix AM7 работает на ветряках с 2019 года.
+    </div>
+  </div>
+</section>
+
+<!-- RATING -->
+<section class="section alt" id="rating">
+  <div class="container">
+    <h2 class="section-title">ТОП-10 ВПС/ВДС хостингов в Нидерландах - рейтинг 2026</h2>
+    <p class="section-sub">Критерии: железо, реальный аптайм, доступность платежей из РФ, KVM, политика по VPN на голландской площадке и порог входа</p>
+
+    <div class="recommender">
+      <h3>🤔 Найдите свой VPS в Амстердаме за 10 секунд</h3>
+      <div class="rec-btns">
+        <button class="rec-btn" onclick="showRec('opt1',this)">💰 Минимальный бюджет</button>
+        <button class="rec-btn" onclick="showRec('opt2',this)">🤖 Под AI/ML и контейнеры</button>
+        <button class="rec-btn" onclick="showRec('opt3',this)">🔒 Под VPN и приватность</button>
+        <button class="rec-btn" onclick="showRec('opt4',this)">🏢 Для юрлица с ЭДО</button>
+      </div>
+      <div class="rec-result" id="rec-opt1">✅ Берите <strong>Beget</strong> (210 ₽) или <strong>VDSina</strong> (240 ₽). Оба в Амстердаме, NVMe, KVM. Для пет-проектов и Telegram-ботов - в самый раз.</div>
+      <div class="rec-result" id="rec-opt2">✅ <strong>Aeza</strong> с Ryzen 9 9950X и RAM-кешированным NVMe, либо <strong>Timeweb Cloud</strong> с Terraform-провайдером и Cloud-init. Почасовой биллинг - можно поднять, прогнать тесты, погасить.</div>
+      <div class="rec-result" id="rec-opt3">✅ <strong>Fornex</strong> (Испания, не блокирует протоколы) или <strong>AdminVPS</strong> с промокодом <strong>VPS30</strong> на минус 30%. На европейских площадках VPN работает без ограничений.</div>
+      <div class="rec-result" id="rec-opt4">✅ <strong>Timeweb Cloud</strong>, <strong>Hostkey</strong> или <strong>AdminVPS</strong>. ЭДО, акты, счета-фактуры, договор, персональный менеджер для крупных клиентов.</div>
+    </div>
+
+    <div class="rating-list">
+
+      <!-- 1 -->
+      <div class="rating-card gold">
+        <div class="rank">1</div>
+        <div class="card-info">
+          <div class="badge-choice">⭐ Лидер рейтинга</div>
+          <h3>Aeza</h3>
+          <p class="card-desc">Голландская площадка в Interxion AMS. Ryzen 9 9950X с RAM-кешированием NVMe, канал до 10 Гбит/с, фильтрация DDoS до 2 Тбит/с в базовом тарифе. Почасовая тарификация - подняли, прогнали бенчмарк, погасили.</p>
+          <div class="card-meta">
+            <span>📍 Interxion AMS</span>
+            <span>💾 NVMe + RAM cache</span>
+            <span>🌐 До 10 Гбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag hot">Ryzen 9 9950X</span>
+            <span class="tag">KVM</span>
+            <span class="tag green">Крипто</span>
+            <span class="tag">Почасово</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 593₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★★ 4.9</div>
+          <a href="#" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Перейти в Aeza →</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="rating-card silver">
+        <div class="rank">2</div>
+        <div class="card-info">
+          <div class="badge-popular">🔥 Работает с 2010 года</div>
+          <h3>Fornex</h3>
+          <p class="card-desc">Юрлицо в Испании, русскоязычная команда. Площадка в Serverius, Tier III, NVMe, KVM, канал 1 Гбит/с с фильтрацией до 10 Гбит/с. Аптайм 99.97% за 2026-й по HOSTERS. Тикет про BGP-сессию закрыли за 4 минуты - проверял лично.</p>
+          <div class="card-meta">
+            <span>📍 Serverius NL</span>
+            <span>💾 NVMe</span>
+            <span>🌐 DDoS 10 Гбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag hot">PayPal</span>
+            <span class="tag green">Крипто</span>
+            <span class="tag">Возврат 7 дн.</span>
+            <span class="tag">16+ лет</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 581₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★★ 4.8</div>
+          <a href="#" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Перейти в Fornex →</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="rating-card bronze">
+        <div class="rank">3</div>
+        <div class="card-info">
+          <div class="badge-cheap">💰 Лучшая цена за набор</div>
+          <h3>AdminVPS</h3>
+          <p class="card-desc">Тариф Lite от 499 ₽ (1 vCPU, 1 ГБ RAM, 15 ГБ NVMe). Бэкапы бесплатно, ispmanager в комплекте. Площадка в Worldstream, Тier III. Линейка «Мощные» на Intel Core i9 до 5.0 ГГц - редкий зверь среди VPS-хостеров.</p>
+          <div class="card-meta">
+            <span>📍 Worldstream</span>
+            <span>💾 NVMe</span>
+            <span>🌐 1 Гбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag hot">Intel i9</span>
+            <span class="tag">KVM</span>
+            <span class="tag green">Бэкапы 0₽</span>
+            <span class="tag">ispmanager</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 499₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★☆ 4.6</div>
+          <a href="#" class="card-btn card-btn-primary card-btn-green" target="_blank" rel="nofollow noopener">VPS30 - минус 30% →</a>
+          <div class="promo-code">🎁 VPS30</div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="rating-card">
+        <div class="rank">4</div>
+        <div class="card-info">
+          <div class="badge-new">🏢 Корпоративный уровень</div>
+          <h3>Timeweb Cloud</h3>
+          <p class="card-desc">Премия Рунета 2024, 132 000+ активных аккаунтов. Голландская точка в Equinix AM. Terraform-провайдер, REST API, Cloud-init, CLI. Биллинг почасовой, посуточный или помесячный. ЭДО, акты, счета-фактуры для юрлиц.</p>
+          <div class="card-meta">
+            <span>📍 Equinix AM</span>
+            <span>💾 NVMe</span>
+            <span>🌐 Безлимит</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Terraform</span>
+            <span class="tag">API</span>
+            <span class="tag">ЭДО</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 477₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★☆ 4.5</div>
+          <a href="#" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="rating-card">
+        <div class="rank">5</div>
+        <div class="card-info">
+          <h3>4VPS</h3>
+          <p class="card-desc">Рекордсмен по географии: 35+ стран, включая Амстердам. На голландской площадке NVMe и порт 2 Гбит/с - редкость, обычно ставят 1 Гбит/с. Однопоточная частота до 5.7 ГГц - для трейдинг-ботов и MT4/MT5 критично.</p>
+          <div class="card-meta">
+            <span>📍 35+ стран</span>
+            <span>💾 NVMe</span>
+            <span>🌐 2 Гбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag">5.7 ГГц</span>
+            <span class="tag">KVM</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 420₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★☆ 4.4</div>
+          <a href="#" class="card-btn" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="rating-card">
+        <div class="rank">6</div>
+        <div class="card-info">
+          <div class="badge-cheap">💰 Минимальный ценник EU</div>
+          <h3>VDSina</h3>
+          <p class="card-desc">Облако от «МакХост». AMD EPYC, NVMe, масштабирование до 128 vCPU. Биллинг посуточный, лимит трафика 32 ТБ. Ресурсы без переподписки - подтверждается в sysbench. Голландская площадка одна, без географической резервации.</p>
+          <div class="card-meta">
+            <span>📍 Амстердам</span>
+            <span>💾 NVMe</span>
+            <span>🌐 32 ТБ трафик</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag">AMD EPYC</span>
+            <span class="tag">Посуточно</span>
+            <span class="tag green">32 ТБ</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 240₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★☆ 4.3</div>
+          <a href="#" class="card-btn" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="rating-card">
+        <div class="rank">7</div>
+        <div class="card-info">
+          <h3>FirstVDS</h3>
+          <p class="card-desc">На рынке с 2002 года. Голландский ЦОД, KVM, SSD (не NVMe, увы). Канал 200 Мбит/с - скромно. Главное преимущество - 14 дней триала, чего не даёт никто из конкурентов с серверами в ЕС. Для VPN и тестов хватит, для баз данных тормозит.</p>
+          <div class="card-meta">
+            <span>📍 Амстердам</span>
+            <span>💾 SSD</span>
+            <span>🌐 200 Мбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag hot">14 дней триала</span>
+            <span class="tag">KVM</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 249₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★☆☆ 4.0</div>
+          <a href="#" class="card-btn" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="rating-card">
+        <div class="rank">8</div>
+        <div class="card-info">
+          <h3>Hostkey</h3>
+          <p class="card-desc">Владеет железом сам, не арендует rack у Equinix. Серверы в Нидерландах, Германии, Финляндии, Исландии и США. Меньше посредников, дешевле bare-metal с GPU - под inference на RTX 4090 или A100 смотрите сюда. KVM-консоль с глюками, но саппорт отвечает по делу.</p>
+          <div class="card-meta">
+            <span>📍 Своё железо в NL</span>
+            <span>💾 NVMe/SSD</span>
+            <span>🌐 1 Гбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag">GPU bare-metal</span>
+            <span class="tag green">Крипто</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 340₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★☆ 4.2</div>
+          <a href="#" class="card-btn" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="rating-card">
+        <div class="rank">9</div>
+        <div class="card-info">
+          <h3>Beget</h3>
+          <p class="card-desc">Питерский ветеран с 2007 года. Голландская площадка с NVMe и процессорами до 4.5 ГГц. Безлимит на канал, бесплатные ежедневные бэкапы. Каталог готовых образов (Node.js, WordPress, Docker, n8n). Под пет-проекты и Telegram-ботов - отлично.</p>
+          <div class="card-meta">
+            <span>📍 Амстердам</span>
+            <span>💾 NVMe</span>
+            <span>🌐 Безлимит</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag hot">Самый дешёвый</span>
+            <span class="tag green">Бэкапы 0₽</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 210₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★★☆ 4.4</div>
+          <a href="#" class="card-btn" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="rating-card">
+        <div class="rank">10</div>
+        <div class="card-info">
+          <h3>SprintHost</h3>
+          <p class="card-desc">Российский хостер с площадкой в Амстердаме. KVM, NVMe, канал 200 Мбит/с (мало для тяжёлой нагрузки). Поддержка по-русски, отвечает за 10 минут. Без излишеств, без сюрпризов. Подойдёт для простых задач.</p>
+          <div class="card-meta">
+            <span>📍 Амстердам</span>
+            <span>💾 NVMe</span>
+            <span>🌐 200 Мбит/с</span>
+          </div>
+          <div class="card-tags">
+            <span class="tag">KVM</span>
+            <span class="tag">Рубли</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">от 249₽</div>
+          <div class="card-price-label">в месяц</div>
+          <div class="card-score">★★★☆☆ 3.9</div>
+          <a href="#" class="card-btn" target="_blank" rel="nofollow noopener">Перейти →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<div style="padding:0 1.5rem;max-width:1180px;margin:0 auto">
+  <div class="mid-cta-banner">
+    <div class="mcb-text">
+      <h3>🚀 Промокод VPS30 = минус 30% на первый счёт</h3>
+      <p>AdminVPS, площадка в Амстердаме, NVMe, KVM. Бэкапы бесплатно. Берите Lite для тестов или «Мощные» на Intel i9.</p>
+    </div>
+    <a href="#" class="mcb-btn" target="_blank" rel="nofollow">Активировать VPS30 →</a>
+  </div>
+</div>
+
+<!-- DETAILS -->
+<section class="section" id="details">
+  <div class="container">
+    <h2 class="section-title">Подробное сравнение топ-3 VPS в Нидерландах</h2>
+    <p class="section-sub">Развёрнутые карточки лидеров: спеки, плюсы и минусы без прилизанности</p>
+
+    <div class="detail-grid">
+
+      <div class="detail-card detail-gold">
+        <div class="detail-header">
+          <span class="detail-rank">🥇 #1</span>
+          <span class="detail-name">Aeza</span>
+          <span class="detail-price">от 593₽/мес</span>
+        </div>
+        <div class="detail-specs">
+          <div class="spec-row"><span class="spec-label">Процессор</span><span class="spec-value">Ryzen 9 9950X</span></div>
+          <div class="spec-row"><span class="spec-label">Диск</span><span class="spec-value">NVMe + RAM cache</span></div>
+          <div class="spec-row"><span class="spec-label">Канал</span><span class="spec-value">До 10 Гбит/с</span></div>
+          <div class="spec-row"><span class="spec-label">Anti-DDoS</span><span class="spec-value">2 Тбит/с</span></div>
+          <div class="spec-row"><span class="spec-label">Биллинг</span><span class="spec-value">Почасовой</span></div>
+          <div class="spec-row"><span class="spec-label">ЦОД</span><span class="spec-value">Interxion AMS</span></div>
+        </div>
+        <div class="detail-pros-cons">
+          <div class="detail-pros">
+            <div class="dpc-title">✅ Плюсы</div>
+            <p>Geekbench 6 ~4200 single-core</p>
+            <p>Почасовая тарификация</p>
+            <p>2 Тбит/с DDoS в базе</p>
+          </div>
+          <div class="detail-cons">
+            <div class="dpc-title">❌ Минусы</div>
+            <p>На RU-серверах VPN заблокирован</p>
+            <p>Шаблонные ответы саппорта</p>
+          </div>
+        </div>
+        <a href="#" class="detail-btn" target="_blank" rel="nofollow">Перейти в Aeza →</a>
+      </div>
+
+      <div class="detail-card detail-silver">
+        <div class="detail-header">
+          <span class="detail-rank">🥈 #2</span>
+          <span class="detail-name">Fornex</span>
+          <span class="detail-price">от 581₽/мес</span>
+        </div>
+        <div class="detail-specs">
+          <div class="spec-row"><span class="spec-label">Процессор</span><span class="spec-value">3.0 ГГц</span></div>
+          <div class="spec-row"><span class="spec-label">Диск</span><span class="spec-value">NVMe</span></div>
+          <div class="spec-row"><span class="spec-label">Канал</span><span class="spec-value">1 Гбит/с</span></div>
+          <div class="spec-row"><span class="spec-label">Anti-DDoS</span><span class="spec-value">До 10 Гбит/с</span></div>
+          <div class="spec-row"><span class="spec-label">Юрисдикция</span><span class="spec-value">Испания</span></div>
+          <div class="spec-row"><span class="spec-label">Аптайм 2026</span><span class="spec-value">99.97%</span></div>
+        </div>
+        <div class="detail-pros-cons">
+          <div class="detail-pros">
+            <div class="dpc-title">✅ Плюсы</div>
+            <p>16+ лет на рынке</p>
+            <p>Саппорт за 4 минуты</p>
+            <p>PayPal, крипта, карты РФ</p>
+            <p>BGP-сессии настраивают</p>
+          </div>
+          <div class="detail-cons">
+            <div class="dpc-title">❌ Минусы</div>
+            <p>Биллинг выглядит как 2018-й</p>
+            <p>Без почасовой оплаты</p>
+          </div>
+        </div>
+        <a href="#" class="detail-btn" target="_blank" rel="nofollow">Перейти в Fornex →</a>
+      </div>
+
+      <div class="detail-card detail-bronze">
+        <div class="detail-header">
+          <span class="detail-rank">🥉 #3</span>
+          <span class="detail-name">AdminVPS</span>
+          <span class="detail-price">от 499₽/мес</span>
+        </div>
+        <div class="detail-specs">
+          <div class="spec-row"><span class="spec-label">Процессор</span><span class="spec-value">Intel i9 до 5.0 ГГц</span></div>
+          <div class="spec-row"><span class="spec-label">Диск</span><span class="spec-value">NVMe</span></div>
+          <div class="spec-row"><span class="spec-label">Канал</span><span class="spec-value">1 Гбит/с</span></div>
+          <div class="spec-row"><span class="spec-label">Трафик</span><span class="spec-value">1 ТБ/мес</span></div>
+          <div class="spec-row"><span class="spec-label">Промокод</span><span class="spec-value">VPS30 (-30%)</span></div>
+          <div class="spec-row"><span class="spec-label">Бэкапы</span><span class="spec-value">Бесплатно</span></div>
+        </div>
+        <div class="detail-pros-cons">
+          <div class="detail-pros">
+            <div class="dpc-title">✅ Плюсы</div>
+            <p>Промо VPS30 минус 30%</p>
+            <p>ispmanager в комплекте</p>
+            <p>Бэкапы 0₽</p>
+            <p>Intel i9 на «Мощных»</p>
+          </div>
+          <div class="detail-cons">
+            <div class="dpc-title">❌ Минусы</div>
+            <p>1 ТБ трафика - мало</p>
+            <p>Нет крипты</p>
+          </div>
+        </div>
+        <a href="#" class="detail-btn" target="_blank" rel="nofollow">VPS30 - минус 30% →</a>
+      </div>
+
+    </div>
+
+    <h3 style="text-align:center;margin:3.5rem 0 1.2rem;font-size:1.4rem;font-weight:800;color:var(--accent2)">Сводная таблица: VPS серверы Нидерландов 2026</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Хостинг</th>
+            <th>от ₽/мес</th>
+            <th>CPU</th>
+            <th>Диск</th>
+            <th>Канал</th>
+            <th>Крипто</th>
+            <th>Триал</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:rgba(245,184,0,.06)"><td>🥇 1</td><td><strong>Aeza</strong></td><td><span style="color:var(--green);font-weight:700">593</span></td><td>Ryzen 9 9950X</td><td>NVMe+RAM</td><td>10 Гбит/с</td><td>✅</td><td>почасово</td></tr>
+          <tr><td>🥈 2</td><td><strong>Fornex</strong></td><td>581</td><td>3.0 ГГц</td><td>NVMe</td><td>1 Гбит/с</td><td>✅</td><td>возврат 7 дн.</td></tr>
+          <tr><td>🥉 3</td><td><strong>AdminVPS</strong> <code style="background:#fff3cd;padding:1px 6px;border-radius:4px;font-size:.78rem">VPS30</code></td><td>499</td><td>Intel i9</td><td>NVMe</td><td>1 Гбит/с</td><td>—</td><td>7 дней</td></tr>
+          <tr><td>4</td><td><strong>Timeweb Cloud</strong></td><td>477</td><td>3.3 ГГц</td><td>NVMe</td><td>1 Гбит/с</td><td>—</td><td>почасово</td></tr>
+          <tr><td>5</td><td><strong>4VPS</strong></td><td>420</td><td>до 5.7 ГГц</td><td>NVMe</td><td>2 Гбит/с</td><td>—</td><td>—</td></tr>
+          <tr><td>6</td><td><strong>VDSina</strong></td><td>240</td><td>AMD EPYC</td><td>NVMe</td><td>1 Гбит/с</td><td>—</td><td>посуточно</td></tr>
+          <tr><td>7</td><td><strong>FirstVDS</strong></td><td>249</td><td>Xeon</td><td>SSD</td><td>200 Мбит/с</td><td>—</td><td>14 дней</td></tr>
+          <tr><td>8</td><td><strong>Hostkey</strong></td><td>340</td><td>Xeon/EPYC</td><td>NVMe/SSD</td><td>1 Гбит/с</td><td>✅</td><td>—</td></tr>
+          <tr><td>9</td><td><strong>Beget</strong></td><td>210</td><td>до 4.5 ГГц</td><td>NVMe</td><td>безлимит</td><td>—</td><td>—</td></tr>
+          <tr><td>10</td><td><strong>SprintHost</strong></td><td>249</td><td>Xeon</td><td>NVMe</td><td>200 Мбит/с</td><td>—</td><td>есть</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- AI/ML -->
+<section class="section alt" id="ai-ml">
+  <div class="article">
+    <h2 class="section-title" style="margin-bottom:2.5rem">VPS Нидерланды для AI/ML: где брать мощности под inference и обучение</h2>
+
+    <p>Это раздел для тех, кто пришёл сюда не за VPN. Дата-сайентисты, ML-инженеры, B2B - вам сюда. Под обучение моделей и тяжёлый inference обычная виртуалка не подойдёт. Нужны выделенные GPU, а это либо bare-metal, либо managed-GPU инстансы. В Нидерландах с этим хорошо.</p>
+
+    <h3>Inference на CPU</h3>
+    <p>Маленькие модели (до 7B параметров в 4-bit квантизации), эмбеддинги, классификаторы. Хватит Ryzen 9 или EPYC с 32-64 ГБ RAM и NVMe. Aeza, 4VPS, VDSina с расширенными конфигурациями. Бюджет - 3000-8000 ₽/мес.</p>
+
+    <h3>Inference на GPU</h3>
+    <p>RTX 4090, A5000, A100. Тут уже bare-metal от Hostkey, LeaseWeb (через посредников), Worldstream. Bare-metal с RTX 4090 в Амстердаме стартует от 25 000 ₽/мес. С H100 - от 180 000 ₽/мес и выше.</p>
+
+    <h3>Обучение и fine-tuning</h3>
+    <p>A100/H100 кластеры. LeaseWeb предлагает managed GPU с InfiniBand между нодами. Это уже B2B-сегмент с прямыми договорами и менеджером.</p>
+
+    <div class="article-highlight2">
+      <strong>Совет от практика:</strong> для прототипа берите почасовой Aeza или Timeweb Cloud с максимальной конфигурацией CPU. Дёшево, быстро, без обязательств. Когда модель готова к проду и нужна низкая латентность - переезжайте на bare-metal к Hostkey или LeaseWeb. KVM-виртуализация добавляет 3-7% оверхеда, на критичных инференс-эндпоинтах это заметно.
+    </div>
+
+    <p>И ещё про сеть. Для распределённого inference (vLLM, TensorRT-LLM) важна сеть между нодами. На обычных VPS у вас будет 1 Гбит/с и общий свитч. Для серьёзных кластеров нужен private VLAN или dedicated 10G линк - спрашивайте у саппорта явно. Aeza и Hostkey умеют, остальные нет.</p>
+
+    <h3>Технические критерии: на что смотреть</h3>
+    <p>Если вы технарь, эту секцию проматывать не стоит. Тут грабли, на которые я наступал.</p>
+
+    <p><strong>Виртуализация.</strong> Только KVM. OpenVZ и LXC проходите мимо. KVM даёт настоящий root, свой kernel, nested virtualization для Docker-in-Docker и Kata Containers. OpenVZ - это контейнер, в нём не запустишь свой ядерный модуль, не поменяешь sysctl, не поставишь WireGuard kernel-mode. KVM + QEMU - индустриальный стандарт, на нём работает половина OpenStack и Proxmox.</p>
+
+    <p><strong>Накопитель.</strong> NVMe или ничего. Разница с обычным SATA SSD - в 3-5 раз по случайному чтению. Для Postgres, MongoDB, Elasticsearch критично. Тестируйте через fio:</p>
+
+    <div class="code-block">
+      <span class="comment"># Тест случайного чтения 4k на NVMe</span><br>
+      fio --name=test --rw=randread --bs=4k --size=1G \<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;--numjobs=4 --runtime=30 --time_based --group_reporting<br><br>
+      <span class="comment"># Нормальный NVMe: 200-400k IOPS</span><br>
+      <span class="comment"># Дешёвый «SSD» от хостера-экономиста: 30-50k IOPS</span>
+    </div>
+
+    <p><strong>Канал.</strong> 1 Гбит/с минимум, 10 Гбит/с комфорт. Безлимит на бумаге часто оборачивается «честным использованием» - читайте AUP. У AdminVPS теперь 1 ТБ/мес на европейских тарифах.</p>
+
+    <p><strong>Сеть.</strong> Спросите про peering с AMS-IX, наличие IPv6 /64, поддержку BGP-сессий через looking glass провайдера. У Fornex и Hostkey BGP можно настроить, у бюджетников нет.</p>
+
+    <p><strong>Аптайм SLA.</strong> 99.9% звучит круто, но это 8.76 часа простоя в год. Tier III даёт 99.982% (1.6 часа простоя). Tier IV - 99.995%. Для продакшена ниже Tier III не смотрим.</p>
+
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>✅ За что я люблю NL под AI/ML</h4>
+        <p>→ AMS-IX и пиринг с Hugging Face, OpenAI, AWS</p>
+        <p>→ GDPR-совместимое хранение данных пользователей ЕС</p>
+        <p>→ Tier III ЦОД и зелёная энергетика</p>
+        <p>→ Доступность bare-metal с GPU от 25 000 ₽/мес</p>
+      </div>
+      <div class="cons">
+        <h4>❌ Чего тут нет</h4>
+        <p>→ Дешёвых H100-инстансов как у Lambda Labs</p>
+        <p>→ Российских провайдеров с СБП и H100 одновременно</p>
+        <p>→ Нативной интеграции с Yandex Cloud / VK Cloud</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTRY COMPARE -->
+<section class="section" id="compare">
+  <div class="article">
+    <h2 class="section-title" style="margin-bottom:2rem">Нидерланды vs Германия vs Финляндия</h2>
+    <p>Спрашивают часто, отвечаю один раз.</p>
+
+    <h3>🇳🇱 Нидерланды (Амстердам)</h3>
+    <p>AMS-IX, лучший peering, нейтральная юрисдикция, GDPR без перегибов. Пинг из Москвы 35-50 мс. Универсал. Подходит почти под любую задачу.</p>
+
+    <h3>🇩🇪 Германия (Франкфурт)</h3>
+    <p>DE-CIX (крупнейший в мире IX по объёму), близость к финансовым рынкам, чуть жёстче регулирование. Пинг 30-45 мс. Выбор для трейдеров и финтеха.</p>
+
+    <h3>🇫🇮 Финляндия (Хельсинки)</h3>
+    <p>Географически ближайшая к РФ европейская точка. Пинг из Петербурга 15-25 мс, из Москвы 25-35 мс. Меньше провайдеров, меньше выбор по железу. Выбор для тех, кому нужна минимальная задержка до СНГ.</p>
+
+    <div class="article-highlight">
+      <strong>Что выбрать:</strong> аудитория общеевропейская - Амстердам. Основная нагрузка из РФ и важна задержка - Хельсинки. Работаете с MetaTrader 4/MT5 и брокерами во Франкфурте - Германия. Под AI/ML и B2B с европейскими клиентами - снова Нидерланды.
+    </div>
+
+    <div class="table-wrap" style="margin-top:1.5rem">
+      <table>
+        <thead>
+          <tr>
+            <th>Локация</th>
+            <th>Пинг из Москвы</th>
+            <th>IX</th>
+            <th>Юрисдикция</th>
+            <th>Под что брать</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:rgba(108,92,231,.06)"><td><strong>🇳🇱 Амстердам</strong></td><td>35-50 мс</td><td>AMS-IX</td><td>GDPR, нейтральная</td><td>Универсал, AI/ML, веб</td></tr>
+          <tr><td><strong>🇩🇪 Франкфурт</strong></td><td>30-45 мс</td><td>DE-CIX</td><td>GDPR, строгая</td><td>Финтех, трейдинг, MT4/MT5</td></tr>
+          <tr><td><strong>🇫🇮 Хельсинки</strong></td><td>25-35 мс</td><td>FICIX</td><td>GDPR</td><td>СНГ-аудитория, низкая задержка</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="section alt" id="payment">
+  <div class="article">
+    <h2 class="section-title" style="margin-bottom:2rem">Способы оплаты VPS Нидерланды из России</h2>
+    <p>Кратко, без воды. Все десять провайдеров принимают рубли. Разница - в дополнительных опциях.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Способ оплаты</th><th>Кто принимает</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Карта РФ (Мир, Visa, MC)</td><td>Все 10 провайдеров</td></tr>
+          <tr><td>СБП</td><td>Timeweb Cloud, VDSina, AdminVPS</td></tr>
+          <tr><td>ЮMoney</td><td>Timeweb Cloud</td></tr>
+          <tr><td>Криптовалюта (BTC, USDT, ETH)</td><td>Aeza, Fornex, Hostkey</td></tr>
+          <tr><td>PayPal</td><td>Fornex</td></tr>
+          <tr><td>Безнал для юрлиц с ЭДО</td><td>Timeweb Cloud, Hostkey, AdminVPS</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-highlight3">
+      <strong>Важно про анонимность:</strong> Aeza и Fornex принимают криптовалюту без KYC. Без паспорта, без верификации. Hostkey работает через BitPay. Если приватность - не маркетинговое слово, эти три провайдера в приоритете.
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="section" id="guide">
+  <div class="article">
+    <h2 class="section-title" style="margin-bottom:2.5rem">Как выбрать VPS в Нидерландах - пошаговая инструкция</h2>
+
+    <h3>Шаг 1. Определитесь с нагрузкой</h3>
+    <p>Личный VPN-тоннель или чат-бот для Telegram потянет тариф с одним ядром, 512 МБ-1 ГБ оперативки и 10-15 ГБ диска. Для VLESS+XHTTP берите от 1 ГБ RAM. Среднему интернет-магазину или веб-приложению понадобятся два ядра и 4 ГБ RAM. Для нагруженного API или SaaS закладывайте четыре ядра и 8 ГБ. Под inference 7B-моделей на CPU - 32 ГБ RAM минимум.</p>
+
+    <h3>Шаг 2. Подберите локацию</h3>
+    <p>Универсальный ответ - Нидерланды. Ближе к РФ - Финляндия. Повышенная приватность - Швейцария (но в этой подборке её предлагает только Fornex). Восточная Европа - Польша.</p>
+
+    <h3>Шаг 3. Проверьте тип виртуализации</h3>
+    <p>Единственная технология, заслуживающая внимания, - KVM. Она выделяет каждой виртуалке изолированное ядро, собственный сетевой стек и полный root-доступ. Docker, смена ядра ОС, вложенная виртуализация - с KVM без ограничений. OpenVZ проходите мимо. Все сервисы из подборки работают на KVM.</p>
+
+    <h3>Шаг 4. Оцените тип накопителя</h3>
+    <p>NVMe обгоняет SSD в три-пять раз по скорости. У Aeza хранилище дополнительно ускорено RAM-кешем. SSD-планы остались у FirstVDS - для VPN хватит, но базы данных будут тормозить.</p>
+
+    <h3>Шаг 5. Протестируйте перед покупкой</h3>
+    <p>FirstVDS даёт две полные недели бесплатно. AdminVPS - семь дней. Fornex возвращает деньги за первую неделю. Aeza и Timeweb Cloud работают почасово - можно подержать пару часов и закрыть. Гоняйте fio, iperf3, speedtest-cli и ping до своих сервисов.</p>
+
+    <h3>VPS Нидерланды для VPN - что работает в мае 2026</h3>
+    <p>Раздел нужен, но короткий. WireGuard на мобильном интернете в РФ - мёртв. ТСПУ режут по сигнатуре. VLESS Reality нестабилен с февраля 2026. Что живо: VLESS+XHTTP (маскировка под HTTP/2, ТСПУ пока не научились) и AmneziaWG на домашней оптике.</p>
+
+    <p>Для VPN-узла в Нидерландах хватит минимального тарифа: 1 vCPU, 1 ГБ RAM, 15 ГБ NVMe. Для VLESS+XHTTP - 1 ГБ RAM минимум. Берите Fornex (не блокирует протоколы нигде), AdminVPS (промокод VPS30) или Aeza на европейской площадке. Российским хостерам, к слову, хотят вообще запретить размещать VPN - только Европа.</p>
+
+    <div class="article-highlight3">
+      <strong>Важно про split-tunneling:</strong> с 15 апреля 2026 российские сервисы (Ozon, ВК, Яндекс) режут трафик через VPN. Маршрутизируйте RU-домены напрямую, всё остальное через VPS. 3X-UI и Marzban это умеют из коробки.
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt" id="faq">
+  <div class="container">
+    <h2 class="section-title">Часто задаваемые вопросы про VPS Нидерланды</h2>
+    <p class="section-sub">Самое практичное из того, что спрашивают в саппорте</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Что такое VPS в Нидерландах и чем VPS отличается от VDS?</div>
+        <div class="faq-a">VPS (Virtual Private Server) и VDS (Virtual Dedicated Server) - синонимы. Это виртуальная машина на физическом сервере в дата-центре. На KVM-виртуализации разницы между VPS и VDS нет вообще. VPS Нидерланды означает, что физический сервер стоит на территории Нидерландов (обычно в Амстердаме).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Сколько стоит арендовать VPS в Нидерландах?</div>
+        <div class="faq-a">Минимальный тариф - 210 ₽/мес у Beget, 240 ₽ у VDSina. Топовые конфигурации с Ryzen 9 - от 3000 ₽/мес. Bare-metal с GPU - от 25 000 ₽/мес.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Можно ли купить VPS в Нидерландах за рубли?</div>
+        <div class="faq-a">Да. Все десять провайдеров из подборки принимают карты РФ и берут оплату в рублях без конвертации. СБП подключена у Timeweb Cloud, VDSina и AdminVPS.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Какой VPS Нидерланды лучше для VPN?</div>
+        <div class="faq-a">Fornex (не блокирует протоколы), AdminVPS с промокодом VPS30, Aeza на европейской площадке. Минимальная конфигурация - 1 vCPU и 1 ГБ RAM. Для VLESS+XHTTP лучше 1 ГБ и больше.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">VPS Нидерланды посуточно или с почасовой оплатой - где взять?</div>
+        <div class="faq-a">Почасовая оплата у Aeza и Timeweb Cloud. Посуточная - у VDSina. Удобно для тестов, временных задач и нагрузочных прогонов.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Где купить дешёвый VPS в Нидерландах с NVMe?</div>
+        <div class="faq-a">Beget (210 ₽), VDSina (240 ₽), AdminVPS (499 ₽ с промо VPS30). Все три на NVMe и KVM.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Какой VPS в Голландии быстрее по диску?</div>
+        <div class="faq-a">По моим замерам через fio - Aeza (NVMe + RAM-кеш) и Timeweb Cloud дают 250-350k IOPS на случайном чтении 4k. FirstVDS на SSD - 35-50k IOPS. Разница ощутимая.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Можно ли арендовать VPS в Амстердаме анонимно, без паспорта?</div>
+        <div class="faq-a">Aeza и Fornex принимают криптовалюту без KYC. Hostkey - через BitPay. Анонимная оплата без верификации возможна.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">VPS Нидерланды с защитой от DDoS - у кого взять?</div>
+        <div class="faq-a">Aeza (2 Тбит/с в базе), Fornex (10 Гбит/с фильтрация), Hostkey (антидидос на голландской площадке). Подходит для игровых серверов и публичных API.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Поддерживается ли Docker и Kubernetes на VPS Нидерланды?</div>
+        <div class="faq-a">Все провайдеры используют KVM-виртуализацию. Docker, K3s, kubeadm работают без ограничений. Готовые образы с Docker есть у Beget, Timeweb Cloud и Aeza.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Можно ли поставить Windows Server на VPS в Нидерландах?</div>
+        <div class="faq-a">Да. Windows Server 2019/2022 предлагают AdminVPS, Timeweb Cloud, Hostkey, FirstVDS. Лицензия обычно входит в стоимость.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Что с GDPR при аренде VPS в Нидерландах?</div>
+        <div class="faq-a">Нидерланды - часть ЕС. GDPR применяется напрямую. Данные граждан ЕС можно хранить без дополнительных юридических обвязок. Все хостеры из топа подписывают DPA по запросу.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Подойдёт ли VPS Нидерланды под inference LLM?</div>
+        <div class="faq-a">Для CPU-инференса моделей до 7B параметров (Qwen2.5, Phi-3, эмбеддинги BGE) - да. Берите Aeza с Ryzen 9 9950X и 32 ГБ RAM. Для GPU-инференса нужен bare-metal от Hostkey или LeaseWeb с RTX 4090/A100/H100.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-block">
+  <div class="cta-block-inner">
+    <div class="hero-badge" style="background:rgba(108,92,231,.25);color:#fff;border-color:rgba(255,255,255,.15);margin-bottom:1rem">🔥 Май 2026 - цены ниже не будет</div>
+    <h2>Берите VPS в Амстердаме и тестируйте</h2>
+    <p>Aeza - под производительность и AI. AdminVPS с промо VPS30 - под бюджет. Fornex - под приватность и юрлица. Все три держат серверы в Tier III ЦОД с прямым пирингом в AMS-IX.</p>
+    <div class="cta-buttons">
+      <a href="#" class="hero-cta" target="_blank" rel="nofollow">⭐ Открыть Aeza</a>
+      <a href="#" class="hero-cta" style="background:linear-gradient(135deg,var(--green),#00a87d);color:#fff" target="_blank" rel="nofollow">💰 AdminVPS - VPS30</a>
+    </div>
+    <p style="font-size:.8rem;color:rgba(255,255,255,.55);margin-top:1.2rem">Цены и характеристики актуальны на 12 мая 2026. Партнёрские ссылки помогают развивать проект и не влияют на стоимость для пользователя.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 VPS·NL - честные рейтинги хостингов в Нидерландах</p>
+  <p>Обновлено: 12 мая 2026 - цены, конфигурации и VPN-политики перепроверены руками</p>
+  <p style="margin-top:.5rem;font-size:.75rem;color:#555">Материал носит информационный характер и не является рекламой. На странице используются партнёрские ссылки. Все товарные знаки принадлежат их владельцам.</p>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-text">
+    <span class="sb-full">🔥 <strong>AdminVPS</strong> - от <strong>499 ₽</strong>, промокод <strong>VPS30</strong> минус 30%</span>
+    <span class="sb-short">🔥 <strong>VPS30</strong> - минус 30%</span>
+  </div>
+  <a href="#" class="sticky-bar-btn" target="_blank" rel="nofollow">Активировать →</a>
+  <button class="sticky-bar-close" onclick="document.getElementById('stickyBar').classList.remove('show');sessionStorage.setItem('sbClosed','1')" aria-label="Закрыть">✕</button>
+</div>
+
+<script>
+// Recommender
+function showRec(id, btn){
+  document.querySelectorAll('.rec-result').forEach(el=>el.classList.remove('show'));
+  document.getElementById('rec-'+id).classList.add('show');
+  document.querySelectorAll('.rec-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));
+});
+
+// Sticky bar
+window.addEventListener('scroll',()=>{
+  if(sessionStorage.getItem('sbClosed')==='1') return;
+  const sb = document.getElementById('stickyBar');
+  if(window.scrollY > 800) sb.classList.add('show');
+  else sb.classList.remove('show');
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>
